@@ -1,92 +1,106 @@
-function scrollCatalog(){
+function scrollToCatalog(){
 
 document
-.getElementById(
-"catalog"
-)
+.getElementById("catalog")
 .scrollIntoView({
-
 behavior:"smooth"
-
-})
+});
 
 }
 
-window.addEventListener(
+/* FILTER */
 
-"load",
+function filterHouses(){
 
-()=>{
-
-setTimeout(
-
-()=>{
-
+let search =
 document
-.getElementById(
-"loader"
-)
-.style.display=
+.getElementById("search")
+.value
+.toLowerCase();
 
-"none"
-
-},
-
-1200
-
-)
-
-}
-
-)
-
-const topBtn=
-
+let price =
 document
-.getElementById(
-"topBtn"
-)
+.getElementById("price")
+.value;
 
-window.addEventListener(
+let rooms =
+document
+.getElementById("rooms")
+.value;
 
-"scroll",
+let houses =
+document
+.querySelectorAll(".house");
 
-()=>{
+houses.forEach(house=>{
 
-if(
+let text =
+house
+.textContent
+.toLowerCase();
 
-window.scrollY>
+let hPrice =
+Number(house.dataset.price);
 
-400
+let hRooms =
+house.dataset.rooms;
 
-){
+let show = true;
 
-topBtn.style.display=
+if(search && !text.includes(search))
+show = false;
 
-"block"
+if(price && hPrice > Number(price))
+show = false;
+
+if(rooms && hRooms != rooms)
+show = false;
+
+house.style.display =
+show ? "block" : "none";
+
+});
 
 }
 
-else{
+/* FAVORITES */
 
-topBtn.style.display=
+function addFav(btn){
 
-"none"
+btn.innerHTML = "✔ Додано";
+
+btn.style.background =
+"linear-gradient(to right,#16a34a,#22c55e)";
+
+btn.disabled = true;
+
+}
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+let menu =
+document.getElementById("mobileMenu");
+
+if(menu.style.display === "flex"){
+
+menu.style.display = "none";
+
+}else{
+
+menu.style.display = "flex";
 
 }
 
 }
 
-)
+/* REGISTER */
 
-topBtn.onclick=()=>{
+function register(event){
 
-window.scrollTo({
+event.preventDefault();
 
-top:0,
-
-behavior:"smooth"
-
-})
+alert("✅ Реєстрація успішна!");
 
 }
