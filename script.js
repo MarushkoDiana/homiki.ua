@@ -1,61 +1,100 @@
 function scrollToCatalog(){
 
 document
-.getElementById("catalog")
+.getElementById(
+"catalog"
+)
 .scrollIntoView({
+
 behavior:"smooth"
+
 });
 
 }
 
 function filter(){
 
-let search =
+let search=
+
 document
-.getElementById("search")
+.getElementById(
+"search"
+)
 .value
 .toLowerCase();
 
-let price =
+let price=
+
 document
-.getElementById("price")
+.getElementById(
+"price"
+)
 .value;
 
-let rooms =
+let houses=
+
 document
-.getElementById("rooms")
-.value;
+.getElementsByClassName(
+"house"
+);
 
-let houses =
-document
-.getElementsByClassName("house");
+for(
 
-for(let i=0;i<houses.length;i++){
+let i=0;
 
-let text =
+i<houses.length;
+
+i++
+
+){
+
+let text=
+
 houses[i]
 .textContent
 .toLowerCase();
 
-let hPrice =
-Number(houses[i].dataset.price);
+let hPrice=
 
-let hRooms =
-houses[i].dataset.rooms;
+Number(
+houses[i]
+.dataset
+.price
+);
 
-let show = true;
+let show=true;
 
-if(search && !text.includes(search))
-show = false;
+if(
 
-if(price && hPrice > Number(price))
-show = false;
+search &&
+!text.includes(search)
 
-if(rooms && hRooms != rooms)
-show = false;
+)
 
-houses[i].style.display =
-show ? "block" : "none";
+show=false;
+
+if(
+
+price &&
+hPrice>
+Number(price)
+
+)
+
+show=false;
+
+houses[i]
+.style.display=
+
+show
+
+?
+
+"block"
+
+:
+
+"none";
 
 }
 
@@ -63,8 +102,63 @@ show ? "block" : "none";
 
 function addFav(btn){
 
-btn.innerHTML = "✔ Додано";
+btn.innerHTML=
 
-btn.style.background = "green";
+"✔ Додано";
+
+btn.style.background=
+
+"#22c55e";
+
+}
+
+window.addEventListener(
+
+"scroll",
+
+()=>{
+
+let btn=
+
+document
+.getElementById(
+"topBtn"
+);
+
+if(
+
+window.scrollY>
+
+500
+
+){
+
+btn.style.display=
+
+"block";
+
+}
+
+else{
+
+btn.style.display=
+
+"none";
+
+}
+
+}
+
+);
+
+function topPage(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
 
 }
