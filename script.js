@@ -8,7 +8,7 @@ document
 
 behavior:"smooth"
 
-});
+})
 
 }
 
@@ -26,22 +26,26 @@ document
 .getElementById(
 "loader"
 )
-.style.display="none";
+.style.display=
+
+"none"
 
 },
 
 1200
 
-);
+)
 
 }
 
-);
+)
 
 const topBtn=
-document.getElementById(
+
+document
+.getElementById(
 "topBtn"
-);
+)
 
 window.addEventListener(
 
@@ -51,29 +55,31 @@ window.addEventListener(
 
 if(
 
-window.scrollY>400
+window.scrollY>
+
+400
 
 ){
 
-topBtn.style.display="block";
+topBtn.style.display=
+
+"block"
 
 }
 
 else{
 
-topBtn.style.display="none";
+topBtn.style.display=
+
+"none"
 
 }
 
 }
 
-);
+)
 
-topBtn.addEventListener(
-
-"click",
-
-()=>{
+topBtn.onclick=()=>{
 
 window.scrollTo({
 
@@ -81,8 +87,6 @@ top:0,
 
 behavior:"smooth"
 
-});
+})
 
 }
-
-);
