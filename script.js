@@ -1,46 +1,47 @@
 function scrollCatalog(){
 
 document
-
 .getElementById(
-
 "catalog"
-
 )
-
 .scrollIntoView({
 
 behavior:"smooth"
 
-})
+});
 
 }
 
-window.onload=()=>{
+window.addEventListener(
+
+"load",
+
+()=>{
 
 setTimeout(
 
 ()=>{
 
 document
-
 .getElementById(
-
 "loader"
-
 )
-
-.style.display=
-
-"none"
+.style.display="none";
 
 },
 
 1200
 
-)
+);
 
 }
+
+);
+
+const topBtn=
+document.getElementById(
+"topBtn"
+);
 
 window.addEventListener(
 
@@ -48,41 +49,31 @@ window.addEventListener(
 
 ()=>{
 
-let btn=
-
-document
-
-.getElementById(
-
-"topBtn"
-
-)
-
-btn.style.display=
+if(
 
 window.scrollY>400
 
-?
+){
 
-"block"
-
-:
-
-"none"
+topBtn.style.display="block";
 
 }
 
-)
+else{
 
-document
+topBtn.style.display="none";
 
-.getElementById(
+}
 
-"topBtn"
+}
 
-)
+);
 
-.onclick=()=>{
+topBtn.addEventListener(
+
+"click",
+
+()=>{
 
 window.scrollTo({
 
@@ -90,6 +81,8 @@ top:0,
 
 behavior:"smooth"
 
-})
+});
 
 }
+
+);
