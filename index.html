@@ -5,7 +5,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+content="width=device-width,initial-scale=1.0">
 
 <title>HOMIKI.UA</title>
 
@@ -16,7 +16,7 @@ href="https://fonts.googleapis.com">
 href="https://fonts.gstatic.com"
 crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
 rel="stylesheet">
 
 <link rel="stylesheet"
@@ -25,6 +25,16 @@ href="style.css">
 </head>
 
 <body>
+
+<div id="loader">
+
+<div class="loader-logo">
+
+HOMIKI<span>.UA</span>
+
+</div>
+
+</div>
 
 <header>
 
@@ -37,19 +47,27 @@ HOMIKI<span>.UA</span>
 <nav>
 
 <a href="#catalog">
+
 Каталог
+
 </a>
 
-<a href="#advantages">
-Переваги
+<a href="#popular">
+
+Популярне
+
 </a>
 
 <a href="#reviews">
+
 Відгуки
+
 </a>
 
 <a href="#contact">
+
 Контакти
+
 </a>
 
 </nav>
@@ -58,30 +76,132 @@ HOMIKI<span>.UA</span>
 
 <section class="hero">
 
+<div class="video-overlay">
+
+</div>
+
+<video
+autoplay
+muted
+loop
+playsinline>
+
+<source
+src="https://cdn.coverr.co/videos/coverr-modern-house-1561826512218?download=1080p"
+type="video/mp4">
+
+</video>
+
 <div class="hero-content">
 
 <div class="hero-badge">
 
-  <section class="featured">
-
-<h2 class="section-title">
-
-🔥 Популярні об'єкти
-
-</h2>
-
-<div class="featured-grid">
-
-<div class="featured-card">
-
-<div class="badge">
-
-TOP
+✨ Premium Real Estate
 
 </div>
 
+<h1>
+
+Будинок
+
+<span>
+
+мрії
+
+</span>
+
+чекає
+
+</h1>
+
+<p>
+
+Сучасна платформа
+для пошуку нерухомості
+по всій Україні.
+
+</p>
+
+<button
+onclick="scrollCatalog()">
+
+Знайти житло
+
+</button>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+
+<h2>
+
+500+
+
+</h2>
+
+<p>
+
+Будинків
+
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+
+12000+
+
+</h2>
+
+<p>
+
+Клієнтів
+
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+
+98%
+
+</h2>
+
+<p>
+
+Рейтинг
+
+</p>
+
+</div>
+
+</section>
+
+<section
+id="popular">
+
+<h2>
+
+Популярні об'єкти
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
 <img
-src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c">
+src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
+
+<div class="content">
 
 <h3>
 
@@ -91,219 +211,73 @@ Luxury Villa
 
 <p>
 
-Київ • 320м²
+Київ
 
 </p>
 
-</div>
+<span>
 
-<div class="featured-card">
-
-<div class="badge">
-
-HOT
-
-</div>
-
-<img
-src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750">
-
-<h3>
-
-Modern House
-
-</h3>
-
-<p>
-
-Львів • 220м²
-
-</p>
-
-</div>
-
-<div class="featured-card">
-
-<div class="badge">
-
-NEW
-
-</div>
-
-<img
-src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6">
-
-<h3>
-
-Premium Home
-
-</h3>
-
-<p>
-
-Луцьк • 260м²
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-✨ Преміум нерухомість України
-
-</div>
-
-<h1>
-
-Знайди
-
-<span class="gradient-text">
-
-будинок мрії
+150 000$
 
 </span>
 
-для себе
-
-</h1>
-
-<p>
-
-Сучасна платформа пошуку
-елітних квартир, будинків
-та котеджів.
-
-</p>
-
-<div class="hero-buttons">
-
-<button
-class="primary-btn"
-onclick="scrollToCatalog()">
-
-Переглянути
-
-</button>
-
-<button
-class="secondary-btn">
-
-Детальніше
-
-</button>
-
 </div>
 
 </div>
 
-</section>
+<div class="card">
 
-<section class="stats">
+<img
+src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
 
-<div class="stat-box">
-
-<h2>500+</h2>
-
-<p>
-Проданих будинків
-</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>12K+</h2>
-
-<p>
-Клієнтів
-</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>98%</h2>
-
-<p>
-Задоволених людей
-</p>
-
-</div>
-
-</section>
-
-<section
-id="advantages">
-
-<h2 class="section-title">
-
-Чому обирають нас
-
-</h2>
-
-<div class="houses">
-
-<div class="house">
-
-<div class="house-content">
+<div class="content">
 
 <h3>
 
-⚡ Швидкий пошук
+Modern Home
 
 </h3>
 
 <p>
 
-Фільтри та карта
-допомагають знайти
-житло швидко.
+Львів
 
 </p>
 
-</div>
+<span>
+
+110 000$
+
+</span>
 
 </div>
 
-<div class="house">
+</div>
 
-<div class="house-content">
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
+
+<div class="content">
 
 <h3>
 
-🛡 Перевірені об'єкти
+Premium House
 
 </h3>
 
 <p>
 
-Уся нерухомість
-перевіряється.
+Луцьк
 
 </p>
 
-</div>
+<span>
 
-</div>
+95 000$
 
-<div class="house">
-
-<div class="house-content">
-
-<h3>
-
-💎 Преміум сервіс
-
-</h3>
-
-<p>
-
-Сучасний дизайн
-та комфорт.
-
-</p>
+</span>
 
 </div>
 
@@ -316,139 +290,20 @@ id="advantages">
 <section
 id="catalog">
 
-<h2
-class="section-title">
+<h2>
 
 Каталог
 
 </h2>
 
-<p
-class="section-subtitle">
-
-Оберіть житло
-
-</p>
-
-<div class="filters">
-
 <input
-type="text"
 id="search"
 placeholder="Пошук..."
 onkeyup="filter()">
 
-<select
-id="price"
-onchange="filter()">
-
-<option value="">
-Ціна
-</option>
-
-<option value="60000">
-до 60 000$
-</option>
-
-<option value="100000">
-до 100 000$
-</option>
-
-<option value="200000">
-до 200 000$
-</option>
-
-</select>
-
-</div>
-
 <div
-class="houses"
+class="cards"
 id="houses">
-
-<div
-class="house"
-data-price="60000"
-data-rooms="2">
-
-<img
-src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
-
-<div
-class="house-content">
-
-<h3>
-
-Будинок Луцьк
-
-</h3>
-
-<p
-class="house-price">
-
-60 000$
-
-</p>
-
-<p>
-
-120м²
-
-</p>
-
-<button
-class="card-btn"
-onclick="addFav(this)">
-
-❤️ В обране
-
-</button>
-
-</div>
-
-</div>
-
-<div
-class="house"
-data-price="100000"
-data-rooms="3">
-
-<img
-src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
-
-<div
-class="house-content">
-
-<h3>
-
-Котедж Львів
-
-</h3>
-
-<p
-class="house-price">
-
-100 000$
-
-</p>
-
-<p>
-
-180м²
-
-</p>
-
-<button
-class="card-btn"
-onclick="addFav(this)">
-
-❤️ В обране
-
-</button>
-
-</div>
-
-</div>
 
 </div>
 
@@ -457,31 +312,27 @@ onclick="addFav(this)">
 <section
 id="reviews">
 
-<h2
-class="section-title">
+<h2>
 
 Відгуки
 
 </h2>
 
-<div
-class="review-grid">
+<div class="reviews">
 
-<div
-class="review">
+<div>
 
 ⭐⭐⭐⭐⭐
 
 <p>
 
-Дуже зручно.
+Швидко знайшов житло.
 
 </p>
 
 </div>
 
-<div
-class="review">
+<div>
 
 ⭐⭐⭐⭐⭐
 
@@ -493,14 +344,13 @@ class="review">
 
 </div>
 
-<div
-class="review">
+<div>
 
 ⭐⭐⭐⭐⭐
 
 <p>
 
-Знайшов будинок.
+Дуже красиво.
 
 </p>
 
@@ -513,17 +363,13 @@ class="review">
 <section
 id="contact">
 
-<h2
-class="section-title">
+<h2>
 
 Реєстрація
 
 </h2>
 
-<div
-class="contact-box">
-
-<form>
+<div class="form">
 
 <input
 placeholder="Ім'я">
@@ -536,20 +382,16 @@ placeholder="Пароль">
 
 <button>
 
-Зареєструватися
+Створити акаунт
 
 </button>
-
-</form>
 
 </div>
 
 </section>
 
 <button
-id="topBtn"
-class="top-btn"
-onclick="topPage()">
+id="topBtn">
 
 ↑
 
