@@ -1,417 +1,83 @@
-<!DOCTYPE html>
-<html lang="uk">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>HOMIKI.UA</title>
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="style.css">
-
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">
-
-HOMIKI<span>.UA</span>
-
-</div>
-
-<nav>
-
-<a href="#catalog">
-Каталог
-</a>
-
-<a href="#advantages">
-Переваги
-</a>
-
-<a href="#reviews">
-Відгуки
-</a>
-
-<a href="#contact">
-Контакти
-</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<div class="hero-badge">
-
-✨ Преміум нерухомість України
-
-</div>
-
-<h1>
-
-Знайди
-
-<span class="gradient-text">
-
-будинок мрії
-
-</span>
-
-для себе
-
-</h1>
-
-<p>
-
-Сучасна платформа пошуку
-елітних квартир, будинків
-та котеджів.
-
-</p>
-
-<div class="hero-buttons">
-
-<button
-class="primary-btn"
-onclick="scrollToCatalog()">
-
-Переглянути
-
-</button>
-
-<button
-class="secondary-btn">
-
-Детальніше
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="stats">
-
-<div class="stat-box">
-
-<h2>500+</h2>
-
-<p>
-Проданих будинків
-</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>12K+</h2>
-
-<p>
-Клієнтів
-</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2>98%</h2>
-
-<p>
-Задоволених людей
-</p>
-
-</div>
-
-</section>
-
-<section
-id="advantages">
+<section class="featured">
 
 <h2 class="section-title">
 
-Чому обирають нас
+🔥 Популярні об'єкти
 
 </h2>
 
-<div class="houses">
+<div class="featured-grid">
 
-<div class="house">
+<div class="featured-card">
 
-<div class="house-content">
+<div class="badge">
 
-<h3>
-
-⚡ Швидкий пошук
-
-</h3>
-
-<p>
-
-Фільтри та карта
-допомагають знайти
-житло швидко.
-
-</p>
+TOP
 
 </div>
-
-</div>
-
-<div class="house">
-
-<div class="house-content">
-
-<h3>
-
-🛡 Перевірені об'єкти
-
-</h3>
-
-<p>
-
-Уся нерухомість
-перевіряється.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="house">
-
-<div class="house-content">
-
-<h3>
-
-💎 Преміум сервіс
-
-</h3>
-
-<p>
-
-Сучасний дизайн
-та комфорт.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section
-id="catalog">
-
-<h2
-class="section-title">
-
-Каталог
-
-</h2>
-
-<p
-class="section-subtitle">
-
-Оберіть житло
-
-</p>
-
-<div class="filters">
-
-<input
-type="text"
-id="search"
-placeholder="Пошук..."
-onkeyup="filter()">
-
-<select
-id="price"
-onchange="filter()">
-
-<option value="">
-Ціна
-</option>
-
-<option value="60000">
-до 60 000$
-</option>
-
-<option value="100000">
-до 100 000$
-</option>
-
-<option value="200000">
-до 200 000$
-</option>
-
-</select>
-
-</div>
-
-<div
-class="houses"
-id="houses">
-
-<div
-class="house"
-data-price="60000"
-data-rooms="2">
 
 <img
-src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
-
-<div
-class="house-content">
+src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c">
 
 <h3>
 
-Будинок Луцьк
+Luxury Villa
 
 </h3>
 
-<p
-class="house-price">
-
-60 000$
-
-</p>
-
 <p>
 
-120м²
+Київ • 320м²
 
 </p>
 
-<button
-class="card-btn"
-onclick="addFav(this)">
-
-❤️ В обране
-
-</button>
-
 </div>
 
-</div>
+<div class="featured-card">
 
-<div
-class="house"
-data-price="100000"
-data-rooms="3">
+<div class="badge">
+
+HOT
+
+</div>
 
 <img
-src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
-
-<div
-class="house-content">
+src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750">
 
 <h3>
 
-Котедж Львів
+Modern House
 
 </h3>
 
-<p
-class="house-price">
-
-100 000$
-
-</p>
-
 <p>
 
-180м²
-
-</p>
-
-<button
-class="card-btn"
-onclick="addFav(this)">
-
-❤️ В обране
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section
-id="reviews">
-
-<h2
-class="section-title">
-
-Відгуки
-
-</h2>
-
-<div
-class="review-grid">
-
-<div
-class="review">
-
-⭐⭐⭐⭐⭐
-
-<p>
-
-Дуже зручно.
+Львів • 220м²
 
 </p>
 
 </div>
 
-<div
-class="review">
+<div class="featured-card">
 
-⭐⭐⭐⭐⭐
+<div class="badge">
 
-<p>
-
-Сучасний сервіс.
-
-</p>
+NEW
 
 </div>
 
-<div
-class="review">
+<img
+src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6">
 
-⭐⭐⭐⭐⭐
+<h3>
+
+Premium Home
+
+</h3>
 
 <p>
 
-Знайшов будинок.
+Луцьк • 260м²
 
 </p>
 
@@ -420,63 +86,3 @@ class="review">
 </div>
 
 </section>
-
-<section
-id="contact">
-
-<h2
-class="section-title">
-
-Реєстрація
-
-</h2>
-
-<div
-class="contact-box">
-
-<form>
-
-<input
-placeholder="Ім'я">
-
-<input
-placeholder="Email">
-
-<input
-placeholder="Пароль">
-
-<button>
-
-Зареєструватися
-
-</button>
-
-</form>
-
-</div>
-
-</section>
-
-<button
-id="topBtn"
-class="top-btn"
-onclick="topPage()">
-
-↑
-
-</button>
-
-<footer>
-
-© 2026 HOMIKI.UA
-
-</footer>
-
-<script
-src="script.js">
-
-</script>
-
-</body>
-
-</html>
