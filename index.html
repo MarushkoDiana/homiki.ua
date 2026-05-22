@@ -4,13 +4,11 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>HOMIKI.UA</title>
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
 href="https://fonts.gstatic.com"
@@ -28,9 +26,9 @@ href="style.css">
 
 <div id="loader">
 
-<div class="loader-logo">
+<div class="loader-text">
 
-HOMIKI<span>.UA</span>
+HOMIKI.UA
 
 </div>
 
@@ -52,9 +50,9 @@ HOMIKI<span>.UA</span>
 
 </a>
 
-<a href="#popular">
+<a href="#stats">
 
-Популярне
+Статистика
 
 </a>
 
@@ -76,22 +74,6 @@ HOMIKI<span>.UA</span>
 
 <section class="hero">
 
-<div class="video-overlay">
-
-</div>
-
-<video
-autoplay
-muted
-loop
-playsinline>
-
-<source
-src="https://cdn.coverr.co/videos/coverr-modern-house-1561826512218?download=1080p"
-type="video/mp4">
-
-</video>
-
 <div class="hero-content">
 
 <div class="hero-badge">
@@ -102,30 +84,28 @@ type="video/mp4">
 
 <h1>
 
-Будинок
+Знайди
 
 <span>
 
-мрії
+будинок мрії
 
 </span>
 
-чекає
+в Україні
 
 </h1>
 
 <p>
 
 Сучасна платформа
-для пошуку нерухомості
-по всій Україні.
+пошуку елітної нерухомості
 
 </p>
 
-<button
-onclick="scrollCatalog()">
+<button onclick="scrollCatalog()">
 
-Знайти житло
+Переглянути
 
 </button>
 
@@ -133,7 +113,9 @@ onclick="scrollCatalog()">
 
 </section>
 
-<section class="stats">
+<section
+id="stats"
+class="stats">
 
 <div class="stat">
 
@@ -155,7 +137,7 @@ onclick="scrollCatalog()">
 
 <h2>
 
-12000+
+12K+
 
 </h2>
 
@@ -186,22 +168,26 @@ onclick="scrollCatalog()">
 </section>
 
 <section
-id="popular">
+id="catalog">
 
 <h2>
 
-Популярні об'єкти
+Популярні будинки
 
 </h2>
 
-<div class="cards">
+<div
+class="cards"
+id="houses">
 
-<div class="card">
+<div
+class="card">
 
 <img
 src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
 
-<div class="content">
+<div
+class="card-content">
 
 <h3>
 
@@ -217,24 +203,32 @@ Luxury Villa
 
 <span>
 
-150 000$
+150000$
 
 </span>
 
-</div>
+<button>
+
+Детальніше
+
+</button>
 
 </div>
 
-<div class="card">
+</div>
+
+<div
+class="card">
 
 <img
 src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
 
-<div class="content">
+<div
+class="card-content">
 
 <h3>
 
-Modern Home
+Modern House
 
 </h3>
 
@@ -246,24 +240,32 @@ Modern Home
 
 <span>
 
-110 000$
+95000$
 
 </span>
 
-</div>
+<button>
+
+Детальніше
+
+</button>
 
 </div>
 
-<div class="card">
+</div>
+
+<div
+class="card">
 
 <img
 src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
 
-<div class="content">
+<div
+class="card-content">
 
 <h3>
 
-Premium House
+Premium Home
 
 </h3>
 
@@ -275,35 +277,19 @@ Premium House
 
 <span>
 
-95 000$
+120000$
 
 </span>
 
-</div>
+<button>
+
+Детальніше
+
+</button>
 
 </div>
 
 </div>
-
-</section>
-
-<section
-id="catalog">
-
-<h2>
-
-Каталог
-
-</h2>
-
-<input
-id="search"
-placeholder="Пошук..."
-onkeyup="filter()">
-
-<div
-class="cards"
-id="houses">
 
 </div>
 
@@ -320,37 +306,37 @@ id="reviews">
 
 <div class="reviews">
 
-<div>
+<div class="review">
 
 ⭐⭐⭐⭐⭐
 
 <p>
 
-Швидко знайшов житло.
+Дуже сучасний сервіс
 
 </p>
 
 </div>
 
-<div>
+<div class="review">
 
 ⭐⭐⭐⭐⭐
 
 <p>
 
-Сучасний сервіс.
+Знайшли житло швидко
 
 </p>
 
 </div>
 
-<div>
+<div class="review">
 
 ⭐⭐⭐⭐⭐
 
 <p>
 
-Дуже красиво.
+Красивий дизайн
 
 </p>
 
@@ -369,16 +355,13 @@ id="contact">
 
 </h2>
 
-<div class="form">
+<div class="contact-box">
 
-<input
-placeholder="Ім'я">
+<input placeholder="Ім'я">
 
-<input
-placeholder="Email">
+<input placeholder="Email">
 
-<input
-placeholder="Пароль">
+<input placeholder="Пароль">
 
 <button>
 
@@ -397,16 +380,7 @@ id="topBtn">
 
 </button>
 
-<footer>
-
-© 2026 HOMIKI.UA
-
-</footer>
-
-<script
-src="script.js">
-
-</script>
+<script src="script.js"></script>
 
 </body>
 
