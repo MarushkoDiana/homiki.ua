@@ -1,9 +1,13 @@
-function scrollToCatalog(){
+function scrollCatalog(){
 
 document
+
 .getElementById(
+
 "catalog"
+
 )
+
 .scrollIntoView({
 
 behavior:"smooth"
@@ -12,103 +16,21 @@ behavior:"smooth"
 
 }
 
-function filter(){
+window.onload=()=>{
 
-let search=
+setTimeout(
 
-document
-.getElementById(
-"search"
-)
-.value
-.toLowerCase();
+()=>{
 
-let price=
-
-document
-.getElementById(
-"price"
-)
-.value;
-
-let houses=
-
-document
-.getElementsByClassName(
-"house"
-);
-
-for(
-
-let i=0;
-
-i<houses.length;
-
-i++
-
-){
-
-let text=
-
-houses[i]
-.textContent
-.toLowerCase();
-
-let hPrice=
-
-Number(
-houses[i]
-.dataset
-.price
-);
-
-let show=true;
-
-if(
-
-search &&
-!text.includes(search)
-
-)
-
-show=false;
-
-if(
-
-price &&
-hPrice>
-Number(price)
-
-)
-
-show=false;
-
-houses[i]
-.style.display=
-
-show
-
-?
-
-"block"
-
-:
+loader.style.display=
 
 "none";
 
-}
+},
 
-}
+1500
 
-function addFav(btn){
-
-btn.innerHTML=
-
-"✔ Додано";
-
-btn.style.background=
-
-"#22c55e";
+)
 
 }
 
@@ -121,37 +43,30 @@ window.addEventListener(
 let btn=
 
 document
+
 .getElementById(
+
 "topBtn"
+
 );
 
-if(
-
-window.scrollY>
-
-500
-
-){
-
 btn.style.display=
 
-"block";
+window.scrollY>400
 
-}
+?
 
-else{
+"block"
 
-btn.style.display=
+:
 
 "none";
 
 }
 
-}
+)
 
-);
-
-function topPage(){
+topBtn.onclick=()=>{
 
 window.scrollTo({
 
@@ -159,108 +74,6 @@ top:0,
 
 behavior:"smooth"
 
-});
+})
 
 }
-
-const observer=
-
-new IntersectionObserver(
-
-entries=>{
-
-entries.forEach(
-
-entry=>{
-
-if(
-
-entry.isIntersecting
-
-){
-
-entry.target.classList.add(
-
-"show"
-
-);
-
-}
-
-}
-
-)
-
-}
-
-);
-
-document
-
-.querySelectorAll(
-
-".house,.review,.stat-box,.featured-card"
-
-)
-
-.forEach(
-
-el=>{
-
-el.classList.add(
-
-"hidden"
-
-);
-
-observer.observe(el);
-
-}
-
-);
-
-window
-
-.addEventListener(
-
-"scroll",
-
-()=>{
-
-const header=
-
-document.querySelector(
-
-"header"
-
-);
-
-if(
-
-window.scrollY>
-
-50
-
-){
-
-header.classList.add(
-
-"scroll"
-
-);
-
-}
-
-else{
-
-header.classList.remove(
-
-"scroll"
-
-);
-
-}
-
-}
-
-);
