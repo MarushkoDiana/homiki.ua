@@ -1,332 +1,313 @@
 <!DOCTYPE html>
 <html lang="uk">
-
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0">
+<title>HOMIKI.UA | Преміум нерухомість</title>
 
-<title>HOMIKI.UA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-rel="preconnect"
-href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<link
-rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap"
-rel="stylesheet">
-
-<link
-rel="stylesheet"
-href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div id="loader">
+<!-- HEADER -->
 
-<div class="loaderLogo">
-
-HOMIKI.UA
-
-</div>
-
-</div>
-
-<header>
+<header class="header">
 
 <div class="logo">
-
 HOMIKI<span>.UA</span>
-
 </div>
 
-<nav>
+<nav class="nav">
 
-<a href="#catalog">
+<a href="#catalog">Каталог</a>
 
-Каталог
+<a href="#advantages">Переваги</a>
 
-</a>
+<a href="#map">Карта</a>
 
-<a href="#advantages">
-
-Переваги
-
-</a>
-
-<a href="#reviews">
-
-Відгуки
-
-</a>
-
-<a href="#contact">
-
-Контакти
-
-</a>
+<a href="#contact">Контакти</a>
 
 </nav>
 
+<button class="menu-btn" onclick="toggleMenu()">
+☰
+</button>
+
 </header>
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+<a href="#catalog">Каталог</a>
+
+<a href="#advantages">Переваги</a>
+
+<a href="#map">Карта</a>
+
+<a href="#contact">Контакти</a>
+
+</div>
+
+<!-- HERO -->
 
 <section class="hero">
 
-<div class="heroContent">
+<div class="hero-overlay"></div>
 
-<div class="badge">
+<div class="hero-content">
 
-Premium Real Estate
-
+<div class="hero-badge">
+✨ Преміальна нерухомість України
 </div>
 
 <h1>
-
-Знайди
-
-<span>
-
-будинок мрії
-
-</span>
-
-в Україні
-
+Знайди свій
+<span>будинок мрії</span>
+вже сьогодні
 </h1>
 
 <p>
-
-Сучасна платформа
-пошуку нерухомості
-
+Сучасна платформа для пошуку елітних будинків,
+котеджів та квартир по всій Україні.
 </p>
 
-<button
-onclick="scrollCatalog()">
+<div class="hero-buttons">
 
-Переглянути
+<button class="primary-btn" onclick="scrollToCatalog()">
+Переглянути будинки
+</button>
 
+<button class="secondary-btn">
+Детальніше
 </button>
 
 </div>
 
-</section>
-
-<section
-class="stats">
-
-<div class="stat">
-
-<h2>
-
-500+
-
-</h2>
-
-<p>
-
-Будинків
-
-</p>
-
-</div>
-
-<div class="stat">
-
-<h2>
-
-12K+
-
-</h2>
-
-<p>
-
-Клієнтів
-
-</p>
-
-</div>
-
-<div class="stat">
-
-<h2>
-
-98%
-
-</h2>
-
-<p>
-
-Рейтинг
-
-</p>
-
 </div>
 
 </section>
 
-<section
-id="advantages">
+<!-- STATS -->
 
-<h2>
+<section class="stats">
 
-Чому HOMIKI
-
-</h2>
-
-<div class="grid">
-
-<div class="box">
-
-⚡
-
-<h3>
-
-Швидко
-
-</h3>
-
-<p>
-
-Розумний пошук
-
-</p>
-
+<div class="stat-card">
+<h2>150+</h2>
+<p>Будинків</p>
 </div>
 
-<div class="box">
-
-🛡
-
-<h3>
-
-Безпечно
-
-</h3>
-
-<p>
-
-Перевірені об'єкти
-
-</p>
-
+<div class="stat-card">
+<h2>50+</h2>
+<p>Міст України</p>
 </div>
 
-<div class="box">
-
-💎
-
-<h3>
-
-Premium
-
-</h3>
-
-<p>
-
-Сучасний дизайн
-
-</p>
-
-</div>
-
+<div class="stat-card">
+<h2>98%</h2>
+<p>Задоволених клієнтів</p>
 </div>
 
 </section>
 
-<section
-id="catalog">
+<!-- CATALOG -->
+
+<section id="catalog">
+
+<div class="section-header">
 
 <h2>
-
-Популярні будинки
-
+Каталог нерухомості
 </h2>
 
-<div class="grid">
+<p>
+Оберіть найкращий варіант для себе
+</p>
 
-<div class="card">
+</div>
 
-<img
-src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
+<!-- FILTERS -->
+
+<div class="filters">
+
+<input
+type="text"
+id="search"
+placeholder="🔍 Пошук..."
+onkeyup="filterHouses()"
+>
+
+<select id="price" onchange="filterHouses()">
+
+<option value="">
+Ціна
+</option>
+
+<option value="60000">
+до $60 000
+</option>
+
+<option value="100000">
+до $100 000
+</option>
+
+<option value="200000">
+до $200 000
+</option>
+
+</select>
+
+<select id="rooms" onchange="filterHouses()">
+
+<option value="">
+Кімнати
+</option>
+
+<option value="2">
+2 кімнати
+</option>
+
+<option value="3">
+3 кімнати
+</option>
+
+<option value="5">
+5 кімнат
+</option>
+
+</select>
+
+</div>
+
+<!-- HOUSES -->
+
+<div class="houses">
+
+<!-- CARD 1 -->
+
+<div class="house" data-price="60000" data-rooms="2">
+
+<div class="house-image">
+
+<img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop">
+
+<div class="house-tag">
+ТОП
+</div>
+
+</div>
+
+<div class="house-content">
+
+<p class="location">
+📍 Луцьк
+</p>
 
 <h3>
+Сучасний будинок
+</h3>
 
+<p class="price">
+$60 000
+</p>
+
+<p class="info">
+2 кімнати • 120м² • Центр міста
+</p>
+
+<button class="card-btn" onclick="addFav(this)">
+❤️ В обране
+</button>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="house" data-price="100000" data-rooms="3">
+
+<div class="house-image">
+
+<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop">
+
+<div class="house-tag premium">
+PREMIUM
+</div>
+
+</div>
+
+<div class="house-content">
+
+<p class="location">
+📍 Львів
+</p>
+
+<h3>
+Преміум котедж
+</h3>
+
+<p class="price">
+$100 000
+</p>
+
+<p class="info">
+3 кімнати • 180м² • Тиха зона
+</p>
+
+<button class="card-btn" onclick="addFav(this)">
+❤️ В обране
+</button>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="house" data-price="150000" data-rooms="5">
+
+<div class="house-image">
+
+<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200&auto=format&fit=crop">
+
+<div class="house-tag luxury">
+LUXURY
+</div>
+
+</div>
+
+<div class="house-content">
+
+<p class="location">
+📍 Київ
+</p>
+
+<h3>
 Luxury Villa
-
 </h3>
 
-<p>
-
-150000$
-
+<p class="price">
+$150 000
 </p>
 
-<button>
+<p class="info">
+5 кімнат • 320м² • Басейн
+</p>
 
-Детальніше
-
+<button class="card-btn" onclick="addFav(this)">
+❤️ В обране
 </button>
 
 </div>
-
-<div class="card">
-
-<img
-src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
-
-<h3>
-
-Modern Home
-
-</h3>
-
-<p>
-
-100000$
-
-</p>
-
-<button>
-
-Детальніше
-
-</button>
-
-</div>
-
-<div class="card">
-
-<img
-src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
-
-<h3>
-
-Premium House
-
-</h3>
-
-<p>
-
-130000$
-
-</p>
-
-<button>
-
-Детальніше
-
-</button>
 
 </div>
 
@@ -334,94 +315,123 @@ Premium House
 
 </section>
 
-<section
-id="reviews">
+<!-- ADVANTAGES -->
+
+<section id="advantages">
+
+<div class="section-header">
 
 <h2>
-
-Відгуки
-
+Наші переваги
 </h2>
 
-<div class="grid">
-
-<div class="box">
-
-⭐⭐⭐⭐⭐
-
 <p>
-
-Швидко знайшла житло
-
+Чому клієнти обирають саме нас
 </p>
 
 </div>
 
-<div class="box">
+<div class="advantages">
 
-⭐⭐⭐⭐⭐
-
+<div class="advantage-card">
+<h3>⚡ Швидкий пошук</h3>
 <p>
-
-Сучасний сервіс
-
+Знаходьте найкращі варіанти за секунди.
 </p>
-
 </div>
 
-<div class="box">
-
-⭐⭐⭐⭐⭐
-
+<div class="advantage-card">
+<h3>💎 Преміум дизайн</h3>
 <p>
-
-Дуже красивий дизайн
-
+Сучасний інтерфейс та елітна нерухомість.
 </p>
+</div>
 
+<div class="advantage-card">
+<h3>🔒 Безпечні угоди</h3>
+<p>
+Надійна платформа для покупки житла.
+</p>
 </div>
 
 </div>
 
 </section>
 
-<section
-id="contact">
+<!-- MAP -->
+
+<section id="map">
+
+<div class="section-header">
 
 <h2>
+Карта нерухомості
+</h2>
 
+<p>
+Обирайте житло по всій Україні
+</p>
+
+</div>
+
+<iframe
+class="map"
+src="https://maps.google.com/maps?q=Ukraine&t=&z=6&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="section-header">
+
+<h2>
 Реєстрація
-
 </h2>
 
-<div class="form">
+<p>
+Створіть акаунт прямо зараз
+</p>
 
-<input placeholder="Ім'я">
+</div>
 
-<input placeholder="Email">
+<div class="contact-box">
 
-<input placeholder="Пароль">
+<form onsubmit="register(event)">
 
-<button>
+<input type="text" placeholder="Ім’я" required>
 
-Створити акаунт
+<input type="email" placeholder="Email" required>
 
+<input type="password" placeholder="Пароль" required>
+
+<button type="submit">
+Зареєструватися
 </button>
+
+</form>
 
 </div>
 
 </section>
 
-<button id="topBtn">
+<!-- FOOTER -->
 
-↑
+<footer>
 
-</button>
+<h2>
+HOMIKI<span>.UA</span>
+</h2>
 
-<script src="script.js">
+<p>
+© 2026 HOMIKI.UA • Всі права захищені
+</p>
 
-</script>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
