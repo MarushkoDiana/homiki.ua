@@ -12,7 +12,7 @@ document
 
 behavior:"smooth"
 
-});
+})
 
 }
 
@@ -22,13 +22,21 @@ setTimeout(
 
 ()=>{
 
-loader.style.display=
+document
 
-"none";
+.getElementById(
+
+"loader"
+
+)
+
+.style.display=
+
+"none"
 
 },
 
-1500
+1200
 
 )
 
@@ -48,7 +56,7 @@ document
 
 "topBtn"
 
-);
+)
 
 btn.style.display=
 
@@ -60,13 +68,21 @@ window.scrollY>400
 
 :
 
-"none";
+"none"
 
 }
 
 )
 
-topBtn.onclick=()=>{
+document
+
+.getElementById(
+
+"topBtn"
+
+)
+
+.onclick=()=>{
 
 window.scrollTo({
 
